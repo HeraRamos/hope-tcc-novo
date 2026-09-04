@@ -2,56 +2,178 @@
   box-sizing: border-box;
 }
 
+/* =========================
+   PÁGINA
+========================= */
+
 .perfil-page {
   min-height: 100vh;
-  padding: 40px;
-
   background: #f3f3f3;
   color: #171717;
-
   font-family: Arial, sans-serif;
 }
 
-.perfil-topo {
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header {
+  width: 100%;
+  height: 88px;
+
+  background: #171717;
+  color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  padding: 0 45px;
+}
+
+.dashboard-left {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-logo {
+  width: 64px;
+  height: 64px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.dashboard-center {
+  text-align: center;
+}
+
+.dashboard-center h1 {
+  margin: 0;
+
+  font-size: 23px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.dashboard-center p {
+  margin: 5px 0 0;
+
+  font-size: 11px;
+
+  color: #bdbdbd;
+}
+
+.dashboard-right {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.dashboard-avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #f2f2f2;
+  color: #171717;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dashboard-user-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.dashboard-user-info strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dashboard-user-info span {
+  color: #bdbdbd;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.perfil-content {
+  width: 100%;
   max-width: 1300px;
-  margin: 0 auto 25px;
+
+  margin: 0 auto;
+
+  padding: 40px;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.perfil-topo {
+  margin-bottom: 25px;
 }
 
 .heading-label {
   display: block;
 
-  color: #777;
+  margin-bottom: 8px;
+
+  color: #777777;
 
   font-size: 10px;
   font-weight: bold;
 
   letter-spacing: 2px;
-
-  margin-bottom: 8px;
 }
 
-.perfil-topo h1 {
+.perfil-topo h2 {
   margin: 0;
 
   font-size: 30px;
 }
 
 .perfil-topo p {
-  color: #777;
-
   margin-top: 8px;
+
+  color: #777777;
 }
 
-/* CARD PRINCIPAL */
+
+/* =========================
+   CARD PRINCIPAL
+========================= */
 
 .profile-hero-card {
-  max-width: 1300px;
+  width: 100%;
 
-  margin: 0 auto 25px;
+  margin-bottom: 25px;
 
   padding: 28px;
 
-  background: white;
+  background: #ffffff;
 
   border: 1px solid #e1e1e1;
 
@@ -79,7 +201,7 @@
   border-radius: 50%;
 
   background: #171717;
-  color: white;
+  color: #ffffff;
 
   display: flex;
   align-items: center;
@@ -92,11 +214,11 @@
 .btn-photo {
   padding: 9px 14px;
 
-  background: white;
-
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 
   border-radius: 7px;
+
+  background: #ffffff;
 
   cursor: pointer;
 }
@@ -108,7 +230,7 @@
 }
 
 .profile-main-info p {
-  color: #777;
+  color: #777777;
 }
 
 .user-type-badge {
@@ -118,26 +240,27 @@
 
   padding: 7px 12px;
 
-  background: #171717;
-  color: white;
-
   border-radius: 6px;
+
+  background: #171717;
+  color: #ffffff;
 
   font-size: 11px;
 }
 
-/* GRID */
+
+/* =========================
+   GRID
+========================= */
 
 .perfil-grid {
-  max-width: 1300px;
-
-  margin: 0 auto 25px;
-
   display: grid;
 
   grid-template-columns: 1fr 330px;
 
   gap: 25px;
+
+  margin-bottom: 25px;
 }
 
 .perfil-sidebar {
@@ -147,12 +270,15 @@
   gap: 20px;
 }
 
-/* CARD */
+
+/* =========================
+   CARDS
+========================= */
 
 .card {
   padding: 25px;
 
-  background: white;
+  background: #ffffff;
 
   border: 1px solid #e1e1e1;
 
@@ -168,14 +294,14 @@
   margin-bottom: 25px;
 }
 
-.step-number {
-  width: 38px;
-  height: 38px;
+.card-icon {
+  width: 40px;
+  height: 40px;
 
   border-radius: 50%;
 
   background: #171717;
-  color: white;
+  color: #ffffff;
 
   display: flex;
   align-items: center;
@@ -189,12 +315,15 @@
 .card-title p {
   margin: 5px 0 0;
 
-  color: #888;
+  color: #888888;
 
   font-size: 12px;
 }
 
-/* FORMULÁRIO */
+
+/* =========================
+   FORMULÁRIO
+========================= */
 
 .profile-form {
   display: grid;
@@ -218,13 +347,16 @@
 
 .form-group input,
 .form-group select {
+  width: 100%;
   height: 43px;
 
   padding: 0 12px;
 
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 
   border-radius: 7px;
+
+  background: #ffffff;
 
   font-size: 13px;
 }
@@ -233,7 +365,7 @@
 .form-group select:disabled {
   background: #f3f3f3;
 
-  color: #777;
+  color: #777777;
 }
 
 .profile-actions {
@@ -245,48 +377,53 @@
   gap: 10px;
 }
 
-.btn-confirmar {
-  min-height: 43px;
-
-  padding: 0 18px;
-
-  border: none;
-
-  border-radius: 7px;
-
-  background: #171717;
-  color: white;
-
-  cursor: pointer;
-}
-
+.btn-confirmar,
 .btn-cancelar {
   min-height: 43px;
 
   padding: 0 18px;
 
-  border: 1px solid #ddd;
-
   border-radius: 7px;
-
-  background: white;
 
   cursor: pointer;
 }
 
-/* SEGURANÇA */
+.btn-confirmar {
+  border: none;
+
+  background: #171717;
+  color: #ffffff;
+}
+
+.btn-cancelar {
+  border: 1px solid #dddddd;
+
+  background: #ffffff;
+  color: #171717;
+}
+
+
+/* =========================
+   SEGURANÇA
+========================= */
 
 .security-card {
   padding: 25px;
 
-  background: #171717;
-  color: white;
-
   border-radius: 12px;
+
+  background: #171717;
+  color: #ffffff;
 }
 
 .security-icon {
   font-size: 25px;
+}
+
+.security-label {
+  margin-top: 15px;
+
+  color: #aaaaaa;
 }
 
 .security-card h3 {
@@ -294,7 +431,7 @@
 }
 
 .security-card p {
-  color: #bbb;
+  color: #bbbbbb;
 
   font-size: 13px;
 
@@ -303,14 +440,13 @@
 
 .btn-security {
   width: 100%;
-
   height: 43px;
 
   border: none;
 
   border-radius: 7px;
 
-  background: white;
+  background: #ffffff;
   color: #171717;
 
   font-weight: bold;
@@ -318,12 +454,15 @@
   cursor: pointer;
 }
 
-/* RESUMO */
+
+/* =========================
+   RESUMO
+========================= */
 
 .profile-summary {
   padding: 22px;
 
-  background: white;
+  background: #ffffff;
 
   border: 1px solid #e1e1e1;
 
@@ -332,29 +471,35 @@
 
 .profile-summary-item {
   display: flex;
+
   justify-content: space-between;
 
   padding: 14px 0;
 
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.profile-summary-item:last-child {
+  border-bottom: none;
 }
 
 .profile-summary-item span {
-  color: #777;
+  color: #777777;
 
   font-size: 12px;
 }
 
-/* HISTÓRICO */
+
+/* =========================
+   HISTÓRICO
+========================= */
 
 .history-card {
-  max-width: 1300px;
-
-  margin: 0 auto;
+  width: 100%;
 }
 
 .history-list {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #eeeeee;
 }
 
 .history-item {
@@ -368,7 +513,7 @@
 
   padding: 18px 0;
 
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .history-date,
@@ -380,17 +525,17 @@
 
 .history-date span,
 .history-time span {
-  color: #999;
+  margin-bottom: 5px;
+
+  color: #999999;
 
   font-size: 9px;
-
-  margin-bottom: 5px;
 }
 
 .history-info span {
-  color: #777;
-
   margin-top: 5px;
+
+  color: #777777;
 
   font-size: 12px;
 }
@@ -398,29 +543,34 @@
 .history-status {
   padding: 7px 10px;
 
-  text-align: center;
-
-  background: #eee;
-
   border-radius: 6px;
+
+  background: #eeeeee;
+
+  text-align: center;
 
   font-size: 11px;
 }
 
-/* MODAL */
+
+/* =========================
+   MODAL
+========================= */
 
 .modal-overlay {
   position: fixed;
 
   inset: 0;
 
+  z-index: 1000;
+
+  padding: 20px;
+
   background: rgba(0, 0, 0, 0.6);
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 20px;
 }
 
 .modal {
@@ -431,9 +581,9 @@
 
   padding: 30px;
 
-  background: white;
-
   border-radius: 12px;
+
+  background: #ffffff;
 }
 
 .modal-close {
@@ -442,14 +592,14 @@
   top: 15px;
   right: 15px;
 
-  border: none;
-
-  background: #eee;
-
   width: 30px;
   height: 30px;
 
+  border: none;
+
   border-radius: 50%;
+
+  background: #eeeeee;
 
   cursor: pointer;
 
@@ -494,22 +644,31 @@
 }
 
 .modal-secondary {
-  background: white;
+  border: 1px solid #dddddd;
 
-  border: 1px solid #ddd;
+  background: #ffffff;
+
+  color: #171717;
 }
 
 .modal-primary {
-  background: #171717;
-
   border: none;
 
-  color: white;
+  background: #171717;
+
+  color: #ffffff;
 }
 
-/* RESPONSIVIDADE */
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
 
 @media (max-width: 900px) {
+
+  .perfil-content {
+    padding: 25px;
+  }
 
   .perfil-grid {
     grid-template-columns: 1fr;
@@ -521,9 +680,38 @@
 
 }
 
+
+@media (max-width: 700px) {
+
+  .dashboard-header {
+    grid-template-columns: auto 1fr auto;
+
+    padding: 0 20px;
+  }
+
+  .dashboard-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .dashboard-center h1 {
+    font-size: 16px;
+  }
+
+  .dashboard-center p {
+    display: none;
+  }
+
+  .dashboard-user-info {
+    display: none;
+  }
+
+}
+
+
 @media (max-width: 600px) {
 
-  .perfil-page {
+  .perfil-content {
     padding: 20px;
   }
 
@@ -543,6 +731,10 @@
 
   .modal-actions {
     grid-template-columns: 1fr;
+  }
+
+  .profile-actions {
+    flex-direction: column;
   }
 
 }
