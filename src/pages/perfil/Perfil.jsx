@@ -78,7 +78,7 @@ function Perfil() {
         </div>
 
         <div className="dashboard-center">
-          <h1>Dashboard</h1>
+          <h1>Meu Perfil</h1>
           <p>Bem-vindo à Hope Barbearia</p>
         </div>
 
