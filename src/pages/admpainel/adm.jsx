@@ -435,4 +435,4 @@ function Administrador() {
   );
 }
 
-export default adm;
+export default Administrador;
