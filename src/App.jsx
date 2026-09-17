@@ -1,7 +1,7 @@
-import Perfil from "./pages/perfil/Perfil";
+import Adm from "./pages/admpainel/adm";
 
 function App() {
-  return <Perfil />;
+  return <Adm />;
 }
 
 export default App;
