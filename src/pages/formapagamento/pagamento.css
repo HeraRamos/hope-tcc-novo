@@ -1,0 +1,897 @@
+/* =========================================
+   HOPE BARBEARIA
+   TELA DE PAGAMENTO
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.pagamento-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #f3f3f3;
+  color: #171717;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.pagamento-header {
+  width: 100%;
+  min-height: 78px;
+
+  background: #111111;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  border-bottom: 1px solid #292929;
+}
+
+.pagamento-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagamento-logo {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.pagamento-header h1 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pagamento-header p {
+  margin: 3px 0 0;
+
+  color: #999999;
+
+  font-size: 11px;
+}
+
+.pagamento-header-user {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.pagamento-header-user > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagamento-header-user strong {
+  font-size: 13px;
+}
+
+.pagamento-header-user span {
+  color: #999999;
+
+  font-size: 10px;
+
+  margin-top: 2px;
+}
+
+.pagamento-avatar {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #111111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.pagamento-content {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  padding: 36px 42px 60px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.pagamento-heading {
+  margin-bottom: 26px;
+}
+
+.pagamento-label {
+  display: block;
+
+  color: #777777;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 7px;
+}
+
+.pagamento-heading h2 {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 1.15;
+
+  font-weight: 750;
+}
+
+.pagamento-heading p {
+  margin: 8px 0 0;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   CARDS DE RESUMO
+========================================= */
+
+.pagamento-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.pagamento-stat {
+  min-height: 105px;
+
+  background: #ffffff;
+
+  border: 1px solid #dedede;
+
+  border-radius: 11px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.035);
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #171717;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pagamento-stat > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.pagamento-stat span {
+  color: #777777;
+
+  font-size: 10px;
+}
+
+.pagamento-stat strong {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   GRID PRINCIPAL
+========================================= */
+
+.pagamento-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    330px;
+
+  gap: 24px;
+
+  align-items: start;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.pagamento-card,
+.historico-card {
+  background: #ffffff;
+
+  border: 1px solid #dedede;
+
+  border-radius: 12px;
+
+  padding: 26px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.035);
+}
+
+.card-heading {
+  margin-bottom: 25px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card-heading span,
+.historico-header span {
+  color: #777777;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.card-heading h3,
+.historico-header h3 {
+  margin: 5px 0 0;
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #dcdcdc;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #171717;
+
+  padding: 12px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition: 0.2s;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 80px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #171717;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   FORMAS DE PAGAMENTO
+========================================= */
+
+.formas-pagamento {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+.forma-button {
+  min-height: 75px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #555555;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.forma-button:hover {
+  border-color: #171717;
+  background: #f5f5f5;
+}
+
+.forma-button span {
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  background: #eeeeee;
+  color: #333333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.forma-button.selected {
+  background: #171717;
+
+  border-color: #171717;
+
+  color: #ffffff;
+}
+
+.forma-button.selected span {
+  background: #ffffff;
+
+  color: #171717;
+}
+
+
+/* =========================================
+   PARCELAMENTO
+========================================= */
+
+.parcelamento-box {
+  padding: 16px;
+
+  margin-top: 2px;
+  margin-bottom: 18px;
+
+  background: #f5f5f5;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.parcelamento-box > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.parcelamento-label {
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.parcelamento-box strong {
+  font-size: 12px;
+}
+
+.parcelamento-box p {
+  margin: 0;
+
+  color: #888888;
+
+  font-size: 9px;
+}
+
+.parcelamento-box select {
+  width: 90px;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  padding: 10px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 8px;
+}
+
+.btn-cancelar,
+.btn-registrar {
+  border-radius: 7px;
+
+  padding: 12px 18px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+.btn-cancelar {
+  border: 1px solid #dddddd;
+
+  background: #ffffff;
+
+  color: #555555;
+}
+
+.btn-cancelar:hover {
+  background: #f3f3f3;
+}
+
+.btn-registrar {
+  border: 1px solid #171717;
+
+  background: #171717;
+
+  color: #ffffff;
+}
+
+.btn-registrar:hover {
+  background: #303030;
+}
+
+
+/* =========================================
+   RESUMO
+========================================= */
+
+.pagamento-resumo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.resumo-card {
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 11px;
+
+  overflow: hidden;
+}
+
+.resumo-header {
+  padding: 21px;
+
+  background: #171717;
+
+  color: #ffffff;
+}
+
+.resumo-header span {
+  color: #999999;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.resumo-header h3 {
+  margin: 5px 0 0;
+
+  font-size: 16px;
+}
+
+.resumo-content {
+  padding: 20px;
+}
+
+.resumo-row {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.resumo-row span {
+  color: #777777;
+
+  font-size: 10px;
+}
+
+.resumo-row strong {
+  font-size: 11px;
+}
+
+.resumo-total {
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.resumo-total span {
+  color: #777777;
+
+  font-size: 10px;
+}
+
+.resumo-total strong {
+  font-size: 23px;
+}
+
+
+/* =========================================
+   INFORMAÇÃO
+========================================= */
+
+.resumo-info {
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 11px;
+}
+
+.resumo-info span {
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.resumo-info p {
+  margin: 8px 0 0;
+
+  color: #777777;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   HISTÓRICO
+========================================= */
+
+.historico-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.historico-header button {
+  border: none;
+
+  background: transparent;
+
+  color: #555555;
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.historico-header button:hover {
+  color: #111111;
+}
+
+
+/* =========================================
+   TABELA
+========================================= */
+
+.tabela-container {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.tabela-container table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 750px;
+}
+
+.tabela-container th {
+  padding: 12px;
+
+  background: #f5f5f5;
+
+  color: #777777;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+
+  text-align: left;
+}
+
+.tabela-container td {
+  padding: 15px 12px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #666666;
+
+  font-size: 10px;
+}
+
+.tabela-container td strong {
+  color: #171717;
+
+  font-size: 11px;
+}
+
+.status-pago,
+.status-parcelado {
+  display: inline-block;
+
+  padding: 6px 9px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.status-pago {
+  background: #eeeeee;
+
+  color: #333333;
+}
+
+.status-parcelado {
+  background: #171717;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .pagamento-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 1000px) {
+
+  .pagamento-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .pagamento-header {
+    padding: 15px 20px;
+  }
+
+  .pagamento-header-user > div:last-child {
+    display: none;
+  }
+
+  .pagamento-content {
+    padding: 28px 18px 45px;
+  }
+
+  .pagamento-heading h2 {
+    font-size: 24px;
+  }
+
+  .formas-pagamento {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .pagamento-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pagamento-card,
+  .historico-card {
+    padding: 18px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancelar,
+  .btn-registrar {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  .pagamento-content {
+    padding: 20px 12px 35px;
+  }
+
+  .formas-pagamento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}

@@ -1,7 +1,20 @@
-import Adm from "./pages/admpainel/adm";
+import { Routes, Route } from "react-router-dom";
+
+import Pagamento from "./pages/formapagamento/pagamento";
 
 function App() {
-  return <Adm />;
+  return (
+    <Routes>
+
+
+
+      <Route
+        path="/Pagamento"
+        element={<Pagamento />}
+      />
+
+    </Routes>
+  );
 }
 
 export default App;
